@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="discoveryvip">
+    <title>Keegan Osler</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">.-->
+<style>
+    body{
+        background-color: white;
+        color:black;
+        font-family: 'Roboto Condensed';
+        height:100%;
+        margin:0;
+    }
+    
+    body,html{
+        height:100%;
+    }
+    #navbar{
+        background-color:black;
+        position:fixed;
+        left:0;
+        top:0;
+        display:block;
+        width:100%;
+        z-index:100;
+        overflow:hidden;
+    }
+    
+    #navbar ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background-color:black;
+    }
+    
+    #navbar li{
+        display:block;
+        float:right;
+    }
+    
+    #navbar li a{
+        display:block;
+        color:white;
+        text-align:center;
+        padding:14px 45px;
+        text-decoration:none;
+        font-family: monospace;
+        font-size: 1.5em;
+    }
+    
+    #navbar li a:hover{
+        background-color:dimgray;
+    }
+    
+    #navbar li.active a{
+        background-color:forestgreen;
+    }
+    
+    #navbar lih{
+        display:block;
+        float:left;
+    }
+    
+    #navbar lih b{
+        display:block;
+        color:white;
+        text-align:center;
+        padding:14px 45px;
+        text-decoration:none;
+        font-family:monospace;
+        font-size: 1.5em;
+    }
+    
+    .myicon{
+        color:white;
+        font-size:1.5em;
+        padding:10px 10px 10px 10px;
+        display:none;
+        text-align:right;
+    }
+    
+    .sm-screen{
+        display:block;
+    }
+    
+    .bg{
+        background-image:url("/C:/Users/erino/Desktop/pictures/2018-05/IMG_2816.jpg");
+        height:100%;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        text-align:center;
+        color:white;
+    }
+    
+    .hello{
+        position:absolute;
+        top:40%;
+        left:20%;
+        font-family:monospace;
+        font-size:3em;
+    }
+    
+    .bio{
+        position:absolute;
+        top:50%;
+        left:20%;
+        right:20%;
+        font-family:monospace;
+        font-size:1.5em;
+        text-align:left;
+    }
+    
+    .bg .btn{
+        position:absolute;
+        top:80%;
+        left:20%;
+        background-color:black;
+        color:white;
+        font-size:1.5em;
+        padding 12px 24px;
+        border:none;
+        cursor:pointer;
+        border-radius:5px;
+    }
+    
+    .footer{
+        position:relative;
+        left:0;
+        bottom:0;
+        width:100%;
+        height:120px;
+        background-color: black;
+        color:white;
+        text-align:center;
+    }
+
+    .footer_icons{
+        font-size:30px;
+        padding:30px 30px 30px 30px;
+        margin-top:40px;
+    }
+    
+</style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="myicon"><i class="fa fa-bars"></i></div>
+        <ul class="sm-screen">
+            <li><a href="/C:/Users/erino/Desktop/websites/KeeganOsler/code/contact.html">Contact</a></li>
+            <li><a href="/C:/Users/erino/Desktop/websites/KeeganOsler/code/projects.html">Projects</a></li>
+            <li><a href="/C:/Users/erino/Desktop/websites/KeeganOsler/code/index.html">About</a></li>
+            <lih><b href="/C:/Users/erino/Desktop/websites/KeeganOsler/code/index.html">Keegan Osler</b></lih>
+        </ul>
+    </nav>
+    <div class="bg">
+        <div class="hello">Hi There! I'm Keegan</div>
+        <div class="bio">I am a freelance website developer currently based out of Calgary, AB. I do UI/UX design, front-end web development and back-end web development. I consider myself a serious techie and love taking on projects that contribute to real world systems.  Whether you're looking for a developer or an employee, welcome!</div>
+        <button class="btn">I need a website</button>
+    </div>
+</body>
+<div class="footer">
+    <span class="footer_icons">
+        <i class="fa fa-envelope"></i>
+        <i class="fa fa-github-square"></i>
+        <i class="fa fa-linkedin"></i>
+    </span>
+    <p>(c) Keegan Osler 2019</p>
+</div>
+</html>
