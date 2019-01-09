@@ -1,3 +1,22 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "oslerkeegan@gmail.com";
+    $from = $_POST['email'];
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2);
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -257,13 +276,15 @@
             <button class="button_icon_google"><a href="https://plus.google.com/118357054617568089819"><i class="fa fa-google-plus"></i> Google+</a></button>
         </div>
         <div class="form">
-            <form action="action_page.php">
+            <form action="" method="post">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Your email address..">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
                 <input type="submit" value="Submit">
             </form>
         </div>
