@@ -9,6 +9,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
 /* Column container */
 .row {  
   display: -ms-flexbox; /* IE10 */
@@ -22,7 +45,7 @@ body {
 .side {
   -ms-flex: 20%; /* IE10 */
   flex: 20%;
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 20px;
 }
 
@@ -30,19 +53,34 @@ body {
 .main {   
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
-  background-color: white;
+  background-color: #f1f1f1;
   padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: black;
 }
 
 </style>
 </head>
 <body>
 
+    <div class="navbar">
+        <a href="#">About Me</a>
+        <a href="#">Skills and Attributes</a>
+        <a href="#">Projects</a>
+        <a href="#">Work Experience</a>
+        <a href="#">Education</a>
+    </div>
+
     <div class="row">
         <div class="side">
           <h2>Keegan Osler</h2>
           <div class="fakeimg" style="height:200px;">Image</div>
-          <h3>My links!</h3>
+          <h3>Quick Links</h3>
           <p>Website: </p>
           <p>Github: </p>
           <p>LinkedIn: </p>
@@ -52,8 +90,22 @@ body {
           <p>I'm a web and software developer from Calgary, Alberta and this is my resume.</p>
           <br>
           <h2>Skills and Attributes</h2>
+          <p>These are my skills.</p>
+          <br>
+          <h2>Projects</h2>
+          <p>These are my projects.</p>
+          <br>
+          <h2>Work Experience</h2>
+          <p>This is my work experience.</p>
+          <br>
+          <h2>Education</h2>
+          <p>This is my education.</p>
+          <br>
         </div>
       </div>
 
+      <div class="footer">
+        <h2>Footer</h2>
+      </div>
 </body>
 </html>
