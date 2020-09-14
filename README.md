@@ -1,5 +1,3 @@
 # keeganosler.github.io
 
-This is where I store my web page projects.
-
-Currently this page shows my electronic resume using HTML and CSS.
+This is my personal webpage and electronic CV.
