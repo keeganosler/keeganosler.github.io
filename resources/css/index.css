@@ -71,6 +71,10 @@ body {
   padding: 20px;
 }
 
+.side h2 {
+  text-align: center;
+}
+
 .side h2,
 h3 {
   color: #3e6270;
@@ -78,6 +82,33 @@ h3 {
 
 .side p {
   color: #619ab0;
+}
+
+.skill-level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circles {
+  display: flex;
+}
+
+.circle-filled {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  border: 1px solid #3e6270;
+  background-color: #3e6270;
+  margin: 3px;
+}
+
+.circle-empty {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  border: 1px solid #3e6270;
+  background-color: white;
 }
 
 .main {
