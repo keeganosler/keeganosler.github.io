@@ -5,7 +5,11 @@ import {
   faInstagram,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCode,
+  faDownload,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -20,4 +24,5 @@ export class AppComponent {
   faLinkedin = faLinkedin;
   faDownload = faDownload;
   faDiscord = faDiscord;
+  faCode = faCode;
 }
