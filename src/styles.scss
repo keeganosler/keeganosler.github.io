@@ -6,8 +6,8 @@
 $light-app-theme: mat-light-theme(
   (
     color: (
-      primary: mat-palette($mat-pink, 700),
-      accent: mat-palette($mat-pink, A200, A100, A400),
+      primary: mat-palette($mat-cyan, 800),
+      accent: mat-palette($mat-cyan, A200, A100, A400),
       warn: mat-palette($mat-red),
     ),
   )
@@ -17,8 +17,8 @@ $dark-app-theme: mat-dark-theme(
   (
     color: (
       primary: mat-palette($mat-cyan),
-      accent: mat-palette($mat-blue-gray, A200, A100, A400),
-      warn: mat-palette($mat-amber),
+      accent: mat-palette($mat-cyan, A200, A100, A400),
+      warn: mat-palette($mat-red),
     ),
   )
 );
@@ -32,7 +32,6 @@ $dark-app-theme: mat-dark-theme(
 html,
 body {
   height: 100%;
-  background-color: map-get($dark-app-theme, 900);
 }
 body {
   margin: 0;
