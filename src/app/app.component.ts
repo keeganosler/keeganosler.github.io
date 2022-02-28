@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import {
   faDiscord,
   faGithub,
@@ -25,4 +26,22 @@ export class AppComponent {
   faDownload = faDownload;
   faDiscord = faDiscord;
   faCode = faCode;
+
+  theme: string;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    this.theme = this.document.documentElement.classList.contains('dark-mode')
+      ? 'darkMode'
+      : '';
+  }
+
+  public selectDarkTheme(): void {
+    this.document.documentElement.classList.add('dark-theme');
+    this.theme = 'dark-theme';
+  }
+
+  public selectLightTheme(): void {
+    this.document.documentElement.classList.remove('dark-theme');
+    this.theme = '';
+  }
 }
