@@ -30,8 +30,8 @@ export class AppComponent {
   theme: string;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
-    this.theme = this.document.documentElement.classList.contains('dark-mode')
-      ? 'darkMode'
+    this.theme = this.document.documentElement.classList.contains('dark-theme')
+      ? 'dark-theme'
       : '';
   }
 
