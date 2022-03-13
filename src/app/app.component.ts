@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
+import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import {
   faDiscord,
   faGithub,
@@ -10,6 +11,8 @@ import {
   faDownload,
   faEnvelope,
   faGlasses,
+  faMoon,
+  faSun,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -26,13 +29,22 @@ export class AppComponent {
   faDownload = faDownload;
   faDiscord = faDiscord;
   faGlasses = faGlasses;
+  faMoon = faMoon;
+  faSun = faSun;
 
   theme: string;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
-    this.theme = this.document.documentElement.classList.contains('dark-theme')
-      ? 'dark-theme'
-      : '';
+    this.theme = 'dark-theme';
+    this.selectDarkTheme();
+  }
+
+  onButtonToggleChange(event: MatButtonToggleChange) {
+    if (event.value) {
+      this.selectDarkTheme();
+    } else {
+      this.selectLightTheme();
+    }
   }
 
   public selectDarkTheme(): void {

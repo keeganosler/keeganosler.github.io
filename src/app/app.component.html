@@ -1,12 +1,16 @@
-<div
-  class="wip-warning position-absolute m-4 p-2"
-  matBadge="1"
-  matBadgeSize="large"
-  matBadgeColor="warn"
->
-  This site is a
-  <span class="fw-bold">Work In Progress</span>
-  :)
+<div class="theme-toggler position-absolute m-2">
+  <mat-button-toggle-group
+    [multiple]="false"
+    (change)="onButtonToggleChange($event)"
+    appearance="legacy"
+  >
+    <mat-button-toggle [checked]="theme == 'dark-theme'" [value]="true"
+      ><mat-icon><fa-icon [icon]="faMoon"></fa-icon></mat-icon
+    ></mat-button-toggle>
+    <mat-button-toggle [checked]="theme !== 'dark-theme'" [value]="false"
+      ><mat-icon><fa-icon [icon]="faSun"></fa-icon></mat-icon
+    ></mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
 <div class="head d-flex align-items-end justify-content-center mb-3">
   <p class="fs-1 text-center fw-bold">

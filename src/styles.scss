@@ -27,6 +27,19 @@ $dark-app-theme: mat-dark-theme(
 
 .dark-theme {
   @include angular-material-color($dark-app-theme);
+
+  p {
+    color: white;
+  }
+  body {
+    background-color: #263238;
+  }
+  .tagline {
+    color: #80deea;
+  }
+  .tagline-divider {
+    color: white;
+  }
 }
 
 html,
@@ -39,5 +52,12 @@ body {
 }
 
 p {
+  color: #263238;
+}
+
+.tagline {
+  color: #00838f;
+}
+.tagline-divider {
   color: #263238;
 }
