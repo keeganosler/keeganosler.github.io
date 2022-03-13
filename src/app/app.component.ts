@@ -56,4 +56,26 @@ export class AppComponent {
     this.document.documentElement.classList.remove('dark-theme');
     this.theme = '';
   }
+
+  onLinkClick(linkType: string) {
+    switch (linkType) {
+      case 'github': {
+        window.location.href = 'https://www.github.com/keeganosler';
+        break;
+      }
+      case 'linkedin': {
+        window.location.href =
+          'https://www.linkedin.com/in/keegan-osler-63a559177';
+        break;
+      }
+      case 'instagram': {
+        window.location.href = 'https://www.instagram.com/keegan_osler';
+        break;
+      }
+      case 'discord': {
+        window.location.href = 'https://discord.com/users/keeganosler#2625';
+        break;
+      }
+    }
+  }
 }
