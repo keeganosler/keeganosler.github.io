@@ -7,9 +7,9 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  faCode,
   faDownload,
   faEnvelope,
+  faGlasses,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -25,7 +25,7 @@ export class AppComponent {
   faLinkedin = faLinkedin;
   faDownload = faDownload;
   faDiscord = faDiscord;
-  faCode = faCode;
+  faGlasses = faGlasses;
 
   theme: string;
 
