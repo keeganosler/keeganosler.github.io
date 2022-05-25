@@ -3,12 +3,20 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
+$dark-background: mat-color($mat-gray, 900);
+$dark-primary: mat-palette($mat-teal, 300);
+$dark-accent: mat-palette($mat-teal, 100);
+$warn: mat-palette($mat-red);
+$light-background: white;
+$light-primary: mat-palette($mat-teal, 800);
+$light-accent: mat-palette($mat-teal, 300);
+
 $light-app-theme: mat-light-theme(
   (
     color: (
-      primary: mat-palette($mat-cyan, 800),
-      accent: mat-palette($mat-blue-gray, 300),
-      warn: mat-palette($mat-red),
+      primary: $light-primary,
+      accent: $light-accent,
+      warn: $warn,
     ),
   )
 );
@@ -16,9 +24,9 @@ $light-app-theme: mat-light-theme(
 $dark-app-theme: mat-dark-theme(
   (
     color: (
-      primary: mat-palette($mat-cyan, 200),
-      accent: mat-palette($mat-blue-gray, 100),
-      warn: mat-palette($mat-red),
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $warn,
     ),
   )
 );
@@ -32,10 +40,10 @@ $dark-app-theme: mat-dark-theme(
     color: white;
   }
   body {
-    background-color: #263238;
+    background-color: $dark-background;
   }
   .tagline {
-    color: #80deea;
+    color: mat-color($dark-primary);
   }
   .tagline-divider {
     color: white;
@@ -46,18 +54,24 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Raleway, "Helvetica Neue", sans-serif !important;
 }
 
 p {
-  color: #263238;
+  color: $dark-background;
 }
 
 .tagline {
-  color: #00838f;
+  color: mat-color($light-primary);
 }
+
 .tagline-divider {
-  color: #263238;
+  color: $dark-background;
+}
+
+a {
+  color: #0091ea !important;
 }
