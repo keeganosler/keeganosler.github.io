@@ -28,46 +28,51 @@
   Currently a UI Engineer helping accelerate the transition to autonomous
   farming at <a href="https://vergeag.com/">Verge Agriculture</a>
 </p>
-<div #buttons class="d-flex flex-wrap justify-content-evenly pt-2">
-  <button
-    mat-flat-button
-    color="primary"
-    class="social-button m-2"
-    (click)="onLinkClick('github')"
+<div class="w-100 d-flex justify-content-center">
+  <div
+    #buttons
+    class="d-flex flex-wrap justify-content-evenly pt-2 buttons-container"
   >
-    <fa-icon [icon]="faGithub" class="me-2"></fa-icon>Github
-    <span class="small">@keeganosler</span>
-  </button>
-  <button
-    mat-flat-button
-    color="primary"
-    class="social-button m-2"
-    (click)="onLinkClick('linkedin')"
-  >
-    <fa-icon [icon]="faLinkedin" class="me-2"></fa-icon>LinkedIn
-  </button>
-  <!-- <button mat-flat-button color="primary" class="social-button m-2">
+    <button
+      mat-flat-button
+      color="primary"
+      class="social-button m-2"
+      (click)="onLinkClick('github')"
+    >
+      <fa-icon [icon]="faGithub" class="me-2"></fa-icon>Github
+      <span class="small">@keeganosler</span>
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      class="social-button m-2"
+      (click)="onLinkClick('linkedin')"
+    >
+      <fa-icon [icon]="faLinkedin" class="me-2"></fa-icon>LinkedIn
+    </button>
+    <!-- <button mat-flat-button color="primary" class="social-button m-2">
     <fa-icon [icon]="faEnvelope" class="me-2"></fa-icon>Send me an Email
   </button>
   <button mat-flat-button color="primary" class="social-button m-2">
     <fa-icon [icon]="faDownload" class="me-2"></fa-icon>Download my CV
   </button> -->
-  <button
-    mat-flat-button
-    color="primary"
-    class="social-button m-2"
-    (click)="onLinkClick('instagram')"
-  >
-    <fa-icon [icon]="faInstagram" class="me-2"></fa-icon>Instagram
-    <span class="small">@keegan_osler</span>
-  </button>
-  <button
-    mat-flat-button
-    color="primary"
-    class="social-button m-2"
-    (click)="onLinkClick('discord')"
-  >
-    <fa-icon [icon]="faDiscord" class="me-2"></fa-icon>Discord
-    <span class="small">#keeganosler</span>
-  </button>
+    <button
+      mat-flat-button
+      color="primary"
+      class="social-button m-2"
+      (click)="onLinkClick('instagram')"
+    >
+      <fa-icon [icon]="faInstagram" class="me-2"></fa-icon>Instagram
+      <span class="small">@keegan_osler</span>
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      class="social-button m-2"
+      (click)="onLinkClick('discord')"
+    >
+      <fa-icon [icon]="faDiscord" class="me-2"></fa-icon>Discord
+      <span class="small">#keeganosler</span>
+    </button>
+  </div>
 </div>
