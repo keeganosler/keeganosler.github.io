@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import {
   faDiscord,
   faGithub,
@@ -39,8 +39,8 @@ export class AppComponent {
     this.selectDarkTheme();
   }
 
-  onButtonToggleChange(event: MatButtonToggleChange) {
-    if (event.value) {
+  onSlideToggleChange(event: MatSlideToggleChange) {
+    if (event.checked) {
       this.selectDarkTheme();
     } else {
       this.selectLightTheme();

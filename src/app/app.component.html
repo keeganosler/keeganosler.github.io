@@ -1,32 +1,28 @@
-<div class="theme-toggler position-absolute m-2">
-  <mat-button-toggle-group
-    [multiple]="false"
-    (change)="onButtonToggleChange($event)"
-    appearance="legacy"
-  >
-    <mat-button-toggle [checked]="theme == 'dark-theme'" [value]="true"
-      ><mat-icon><fa-icon [icon]="faMoon"></fa-icon></mat-icon
-    ></mat-button-toggle>
-    <mat-button-toggle [checked]="theme !== 'dark-theme'" [value]="false"
-      ><mat-icon><fa-icon [icon]="faSun"></fa-icon></mat-icon
-    ></mat-button-toggle>
-  </mat-button-toggle-group>
+<div class="position-absolute m-2">
+  <mat-icon class="me-2"><fa-icon [icon]="faSun"></fa-icon></mat-icon
+  ><mat-slide-toggle
+    [checked]="theme == 'dark-theme'"
+    (change)="onSlideToggleChange($event)"
+  ></mat-slide-toggle
+  ><mat-icon class="ms-2"
+    ><fa-icon [icon]="faMoon" class="class"></fa-icon
+  ></mat-icon>
 </div>
 <div class="head d-flex align-items-end justify-content-center mb-3">
-  <p class="fs-1 text-center fw-bold">
+  <h1 class="fs-1 text-center fw-bold">
     Hey, I'm Keegan<mat-icon class="ms-2" inline
       ><fa-icon [icon]="faGlasses"></fa-icon
     ></mat-icon>
-  </p>
+  </h1>
 </div>
 <div class="d-flex align-items-center justify-content-center mb-3">
   <p class="tagline fs-4 fw-bold text-center">
-    Frontend Developer <span class="tagline-divider">|</span> Digital Designer
+    Frontend Developer <span class="tagline-divider">|</span> UI Engineer
   </p>
 </div>
-<p class="text-center fst-italic">
-  Currently a UI Engineer helping accelerate the transition to autonomous
-  farming at <a href="https://vergeag.com/"><b>Verge Agriculture</b></a>
+<p class="text-center">
+  Currently helping accelerate the transition to autonomous farming at
+  <a href="https://vergeag.com/">Verge Agriculture</a>
 </p>
 <div class="w-100 d-flex justify-content-center">
   <div

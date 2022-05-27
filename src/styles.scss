@@ -4,18 +4,21 @@
 @include mat-core();
 
 $dark-background: mat-color($mat-gray, 900);
-$dark-primary: mat-palette($mat-teal, 300);
-$dark-accent: mat-palette($mat-teal, 100);
 $warn: mat-palette($mat-red);
-$light-background: white;
-$light-primary: mat-palette($mat-teal, 800);
-$light-accent: mat-palette($mat-teal, 300);
+$blue-palette: mat-palette($mat-light-blue, A200);
+$pink-palette: mat-palette($mat-pink, A100);
+$blue-primary: mat-color($blue-palette);
+$blue-darker: mat-color($blue-palette, darker);
+$blue-lighter: mat-color($blue-palette, lighter);
+$pink-primary: mat-color($pink-palette);
+$pink-darker: mat-color($pink-palette, darker);
+$pink-lighter: mat-color($pink-palette, lighter);
 
 $light-app-theme: mat-light-theme(
   (
     color: (
-      primary: $light-primary,
-      accent: $light-accent,
+      primary: mat-palette($blue-palette),
+      accent: mat-palette($pink-palette),
       warn: $warn,
     ),
   )
@@ -24,8 +27,8 @@ $light-app-theme: mat-light-theme(
 $dark-app-theme: mat-dark-theme(
   (
     color: (
-      primary: $dark-primary,
-      accent: $dark-accent,
+      primary: mat-palette($blue-palette),
+      accent: mat-palette($pink-palette),
       warn: $warn,
     ),
   )
@@ -35,18 +38,26 @@ $dark-app-theme: mat-dark-theme(
 
 .dark-theme {
   @include angular-material-color($dark-app-theme);
-
+  h1 {
+    color: $blue-darker;
+  }
   p {
-    color: white;
+    color: $blue-lighter;
   }
   body {
     background-color: $dark-background;
   }
   .tagline {
-    color: mat-color($dark-primary);
+    color: $blue-lighter;
   }
   .tagline-divider {
-    color: white;
+    color: $blue-darker;
+  }
+  a {
+    color: $blue-darker !important;
+  }
+  button {
+    background-color: $blue-darker !important;
   }
 }
 
@@ -60,18 +71,30 @@ body {
   font-family: Raleway, "Helvetica Neue", sans-serif !important;
 }
 
+h1 {
+  color: $blue-darker;
+}
+
 p {
-  color: $dark-background;
+  color: $blue-primary;
 }
 
 .tagline {
-  color: mat-color($light-primary);
+  color: $blue-primary;
 }
 
 .tagline-divider {
-  color: $dark-background;
+  color: $blue-darker;
 }
 
 a {
-  color: #0091ea !important;
+  color: $blue-darker !important;
+}
+
+fa-icon {
+  color: $pink-primary !important;
+}
+
+button {
+  background-color: $blue-darker !important;
 }
