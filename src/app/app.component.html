@@ -1,28 +1,43 @@
 <div class="position-absolute m-2">
-  <mat-icon class="me-2"><fa-icon [icon]="faSun"></fa-icon></mat-icon
+  <mat-icon class="me-2"
+    ><fa-icon
+      [icon]="faSun"
+      [ngClass]="{
+        'pink-faded-icon': theme == '',
+        'inactive-icon-dark': theme == 'dark-theme'
+      }"
+    ></fa-icon></mat-icon
   ><mat-slide-toggle
     [checked]="theme == 'dark-theme'"
     (change)="onSlideToggleChange($event)"
   ></mat-slide-toggle
   ><mat-icon class="ms-2"
-    ><fa-icon [icon]="faMoon" class="class"></fa-icon
+    ><fa-icon
+      [icon]="faMoon"
+      [ngClass]="{
+        'pink-faded-icon': theme == 'dark-theme',
+        'inactive-icon-light': theme == ''
+      }"
+    ></fa-icon
   ></mat-icon>
 </div>
 <div class="head d-flex align-items-end justify-content-center mb-3">
-  <h1 class="fs-1 text-center fw-bold">
+  <p class="header fs-1 text-center fw-bold">
     Hey, I'm Keegan<mat-icon class="ms-2" inline
-      ><fa-icon [icon]="faGlasses"></fa-icon
+      ><fa-icon class="pink-icon" [icon]="faGlasses"></fa-icon
     ></mat-icon>
-  </h1>
+  </p>
 </div>
 <div class="d-flex align-items-center justify-content-center mb-3">
   <p class="tagline fs-4 fw-bold text-center">
-    Frontend Developer <span class="tagline-divider">|</span> UI Engineer
+    Frontend Developer & UI Engineer
   </p>
 </div>
 <p class="text-center">
-  Currently helping accelerate the transition to autonomous farming at
-  <a href="https://vergeag.com/">Verge Agriculture</a>
+  <i
+    >Currently helping accelerate the transition to autonomous farming at
+    <a href="https://vergeag.com/"><b>Verge Agriculture</b></a></i
+  >
 </p>
 <div class="w-100 d-flex justify-content-center">
   <div
@@ -35,8 +50,9 @@
       class="social-button m-2"
       (click)="onLinkClick('github')"
     >
-      <fa-icon [icon]="faGithub" class="me-2"></fa-icon>Github
-      <span class="small">@keeganosler</span>
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faGithub" class="fs-4 pink-icon me-2"></fa-icon>Github
+      </div>
     </button>
     <button
       mat-flat-button
@@ -44,7 +60,10 @@
       class="social-button m-2"
       (click)="onLinkClick('linkedin')"
     >
-      <fa-icon [icon]="faLinkedin" class="me-2"></fa-icon>LinkedIn
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faLinkedin" class="fs-4 pink-icon me-2"></fa-icon
+        >LinkedIn
+      </div>
     </button>
     <!-- <button mat-flat-button color="primary" class="social-button m-2">
     <fa-icon [icon]="faEnvelope" class="me-2"></fa-icon>Send me an Email
@@ -58,8 +77,10 @@
       class="social-button m-2"
       (click)="onLinkClick('instagram')"
     >
-      <fa-icon [icon]="faInstagram" class="me-2"></fa-icon>Instagram
-      <span class="small">@keegan_osler</span>
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faInstagram" class="fs-4 me-2 pink-icon"></fa-icon
+        >Instagram
+      </div>
     </button>
     <button
       mat-flat-button
@@ -67,8 +88,10 @@
       class="social-button m-2"
       (click)="onLinkClick('discord')"
     >
-      <fa-icon [icon]="faDiscord" class="me-2"></fa-icon>Discord
-      <span class="small">#keeganosler</span>
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faDiscord" class="fs-4 pink-icon me-2"></fa-icon
+        >Discord
+      </div>
     </button>
   </div>
 </div>

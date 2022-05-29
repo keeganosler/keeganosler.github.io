@@ -3,22 +3,112 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
-$dark-background: mat-color($mat-gray, 900);
+$custom-surface-palette: (
+  50: #e0e0e0,
+  100: #b3b3b3,
+  200: #808080,
+  300: #4d4d4d,
+  400: #262626,
+  500: #000000,
+  600: #000000,
+  700: #000000,
+  800: #000000,
+  900: #000000,
+  A100: #a6a6a6,
+  A200: #8c8c8c,
+  A400: #737373,
+  A700: #666666,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$custom-pink-palette: (
+  50: #fdf5f7,
+  100: #fbe6ec,
+  200: #f9d6df,
+  300: #f6c5d2,
+  400: #f4b8c9,
+  500: #f2acbf,
+  600: #f0a5b9,
+  700: #ee9bb1,
+  800: #ec92a9,
+  900: #e8829b,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #fff2f5,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$custom-blue-palette: (
+  50: #ebfafd,
+  100: #cef3fb,
+  200: #aeebf9,
+  300: #8de3f6,
+  400: #74ddf4,
+  500: #5cd7f2,
+  600: #54d3f0,
+  700: #4acdee,
+  800: #41c7ec,
+  900: #30bee8,
+  A100: #ffffff,
+  A200: #f8fdff,
+  A400: #c5f1ff,
+  A700: #acebff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
 $warn: mat-palette($mat-red);
-$blue-palette: mat-palette($mat-light-blue, A200);
-$pink-palette: mat-palette($mat-pink, A100);
-$blue-primary: mat-color($blue-palette);
-$blue-darker: mat-color($blue-palette, darker);
-$blue-lighter: mat-color($blue-palette, lighter);
-$pink-primary: mat-color($pink-palette);
-$pink-darker: mat-color($pink-palette, darker);
-$pink-lighter: mat-color($pink-palette, lighter);
 
 $light-app-theme: mat-light-theme(
   (
     color: (
-      primary: mat-palette($blue-palette),
-      accent: mat-palette($pink-palette),
+      primary: mat-palette($custom-blue-palette, 900, 300, 900, 600),
+      accent: mat-palette($custom-surface-palette, 200),
       warn: $warn,
     ),
   )
@@ -27,8 +117,8 @@ $light-app-theme: mat-light-theme(
 $dark-app-theme: mat-dark-theme(
   (
     color: (
-      primary: mat-palette($blue-palette),
-      accent: mat-palette($pink-palette),
+      primary: mat-palette($custom-blue-palette, 600, 300, 900, 600),
+      accent: mat-palette($custom-surface-palette, 200),
       warn: $warn,
     ),
   )
@@ -38,26 +128,18 @@ $dark-app-theme: mat-dark-theme(
 
 .dark-theme {
   @include angular-material-color($dark-app-theme);
-  h1 {
-    color: $blue-darker;
-  }
   p {
-    color: $blue-lighter;
+    color: mat-color($custom-surface-palette, 100);
+  }
+  p.header,
+  .tagline {
+    color: mat-color($custom-surface-palette, 50);
   }
   body {
-    background-color: $dark-background;
-  }
-  .tagline {
-    color: $blue-lighter;
-  }
-  .tagline-divider {
-    color: $blue-darker;
+    background-color: mat-color($custom-surface-palette, 900);
   }
   a {
-    color: $blue-darker !important;
-  }
-  button {
-    background-color: $blue-darker !important;
+    color: mat-color($custom-blue-palette, 600) !important;
   }
 }
 
@@ -65,36 +147,29 @@ html,
 body {
   height: 100%;
 }
-
 body {
   margin: 0;
   font-family: Raleway, "Helvetica Neue", sans-serif !important;
 }
-
-h1 {
-  color: $blue-darker;
-}
-
 p {
-  color: $blue-primary;
+  color: mat-color($custom-surface-palette, 300);
 }
-
+p.header,
 .tagline {
-  color: $blue-primary;
+  color: mat-color($custom-surface-palette, 900);
 }
-
-.tagline-divider {
-  color: $blue-darker;
+fa-icon.pink-icon {
+  color: mat-color($custom-pink-palette, 900) !important;
 }
-
+fa-icon.pink-faded-icon {
+  color: mat-color($custom-pink-palette, 600) !important;
+}
+fa-icon.inactive-icon-light {
+  color: mat-color($custom-surface-palette, 100) !important;
+}
+fa-icon.inactive-icon-dark {
+  color: mat-color($custom-surface-palette, 400) !important;
+}
 a {
-  color: $blue-darker !important;
-}
-
-fa-icon {
-  color: $pink-primary !important;
-}
-
-button {
-  background-color: $blue-darker !important;
+  color: mat-color($custom-blue-palette, 900) !important;
 }
