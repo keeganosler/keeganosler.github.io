@@ -139,7 +139,7 @@ $dark-app-theme: mat-dark-theme(
     background-color: mat-color($custom-surface-palette, 900);
   }
   a {
-    color: mat-color($custom-blue-palette, 600) !important;
+    color: mat-color($custom-surface-palette, 200) !important;
   }
 }
 
@@ -171,5 +171,5 @@ fa-icon.inactive-icon-dark {
   color: mat-color($custom-surface-palette, 400) !important;
 }
 a {
-  color: mat-color($custom-blue-palette, 900) !important;
+  color: mat-color($custom-surface-palette, 300) !important;
 }
