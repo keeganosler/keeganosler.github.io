@@ -158,6 +158,9 @@ p.header,
 .tagline {
   color: mat-color($custom-surface-palette, 900);
 }
+fa-icon.blue-icon {
+  color: mat-color($custom-blue-palette, 900) !important;
+}
 fa-icon.pink-icon {
   color: mat-color($custom-pink-palette, 900) !important;
 }
