@@ -1,5 +1,7 @@
 @use "@angular/material" as mat;
 @import "colors";
+@import "./../helpers/mixins.scss";
+
 @include mat-core();
 
 $app-theme: mat.define-light-theme(
@@ -9,3 +11,30 @@ $app-theme: mat.define-light-theme(
 );
 
 @include angular-material-theme($app-theme);
+
+.mat-icon {
+  &.primary-icon {
+    color: $pink-500;
+  }
+  &.inactive-icon-light {
+    color: $surface-200;
+  }
+  &.active-icon-light {
+    color: $surface-400;
+  }
+  &.inactive-icon-dark {
+    color: $surface-600;
+  }
+  &.active-icon-dark {
+    color: $surface-400;
+  }
+}
+
+.mat-slide-toggle {
+  &.mat-checked {
+    @include neutral-slide-toggle($surface-400, $surface-600);
+  }
+  &:not(.mat-checked) {
+    @include neutral-slide-toggle($surface-200, $surface-300);
+  }
+}

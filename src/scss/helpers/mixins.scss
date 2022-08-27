@@ -1,0 +1,29 @@
+@mixin base-theme($text-color, $background-color) {
+  p {
+    color: $text-color;
+  }
+  body {
+    background-color: $background-color;
+  }
+  a {
+    color: $text-color !important;
+  }
+}
+
+@mixin dark-theme() {
+  @include base-theme($surface-50, $surface-900);
+}
+
+@mixin light-theme() {
+  @include base-theme($surface-900, $surface-50);
+}
+
+@mixin neutral-slide-toggle($thumb-color, $background-color) {
+  .mat-slide-toggle-thumb {
+    background-color: $thumb-color;
+  }
+  .mat-slide-toggle-bar,
+  .mat-ripple-element {
+    background-color: $background-color;
+  }
+}

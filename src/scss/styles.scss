@@ -1,12 +1,9 @@
 @import "./theme/mat-theme.scss";
 
+@include light-theme();
+
 .dark-theme {
-  p {
-    color: mat-color($surface-palette, 50);
-  }
-  body {
-    background-color: mat-color($surface-palette, 900);
-  }
+  @include dark-theme();
 }
 
 html,

@@ -1,37 +1,33 @@
 <div class="position-absolute m-2">
-  <mat-icon class="me-2"
-    ><fa-icon
-      [icon]="faSun"
-      [ngClass]="{
-        'pink-faded-icon': theme == '',
-        'inactive-icon-dark': theme == 'dark-theme'
-      }"
-    ></fa-icon></mat-icon
+  <mat-icon
+    class="me-2"
+    [ngClass]="{
+      'active-icon-light': theme == '',
+      'inactive-icon-dark': theme == 'dark-theme'
+    }"
+    ><fa-icon [icon]="faSun"></fa-icon></mat-icon
   ><mat-slide-toggle
     [checked]="theme == 'dark-theme'"
     (change)="onSlideToggleChange($event)"
   ></mat-slide-toggle
-  ><mat-icon class="ms-2"
-    ><fa-icon
-      [icon]="faMoon"
-      [ngClass]="{
-        'pink-faded-icon': theme == 'dark-theme',
-        'inactive-icon-light': theme == ''
-      }"
-    ></fa-icon
+  ><mat-icon
+    class="ms-2"
+    [ngClass]="{
+      'active-icon-dark': theme == 'dark-theme',
+      'inactive-icon-light': theme == ''
+    }"
+    ><fa-icon [icon]="faMoon"></fa-icon
   ></mat-icon>
 </div>
 <div class="head d-flex align-items-end justify-content-center mb-3">
   <p class="header fs-1 text-center fw-bold">
-    Hey, I'm Keegan<mat-icon class="ms-2" inline
-      ><fa-icon class="blue-icon" [icon]="faGlasses"></fa-icon
+    Hey, I'm Keegan<mat-icon inline class="ms-2 primary-icon"
+      ><fa-icon [icon]="faGlasses"></fa-icon
     ></mat-icon>
   </p>
 </div>
 <div class="d-flex align-items-center justify-content-center mb-3">
-  <p class="tagline fs-4 fw-bold text-center">
-    Frontend Developer & UI Engineer
-  </p>
+  <p class="fs-4 fw-bold text-center">Frontend Developer & UI Engineer</p>
 </div>
 <p class="text-center ps-2 pe-2">
   <i
@@ -51,7 +47,7 @@
       (click)="onLinkClick('github')"
     >
       <div class="d-flex align-items-center justify-content-center">
-        <fa-icon [icon]="faGithub" class="fs-4 pink-icon me-2"></fa-icon>Github
+        <fa-icon [icon]="faGithub" class="fs-4 me-2"></fa-icon>Github
       </div>
     </button>
     <button
@@ -61,14 +57,12 @@
       (click)="onLinkClick('linkedin')"
     >
       <div class="d-flex align-items-center justify-content-center">
-        <fa-icon [icon]="faLinkedin" class="fs-4 pink-icon me-2"></fa-icon
-        >LinkedIn
+        <fa-icon [icon]="faLinkedin" class="fs-4 me-2"></fa-icon>LinkedIn
       </div>
     </button>
-    <!-- <button mat-flat-button color="primary" class="social-button m-2">
-      <fa-icon [icon]="faEnvelope" class="fs-4 pink-icon me-2"></fa-icon>Send me
-      an Email
-    </button> -->
+    <button mat-flat-button color="primary" class="social-button m-2">
+      <fa-icon [icon]="faEnvelope" class="fs-4 me-2"></fa-icon>Send me an Email
+    </button>
 
     <button
       mat-flat-button
@@ -77,8 +71,7 @@
       (click)="onLinkClick('instagram')"
     >
       <div class="d-flex align-items-center justify-content-center">
-        <fa-icon [icon]="faInstagram" class="fs-4 me-2 pink-icon"></fa-icon
-        >Instagram
+        <fa-icon [icon]="faInstagram" class="fs-4 me-2"></fa-icon>Instagram
       </div>
     </button>
     <button
@@ -88,15 +81,13 @@
       (click)="onLinkClick('discord')"
     >
       <div class="d-flex align-items-center justify-content-center">
-        <fa-icon [icon]="faDiscord" class="fs-4 pink-icon me-2"></fa-icon
-        >Discord
+        <fa-icon [icon]="faDiscord" class="fs-4 me-2"></fa-icon>Discord
       </div>
     </button>
-    <!-- <a
+    <a
       ><button mat-flat-button color="primary" class="social-button m-2">
-        <fa-icon [icon]="faDownload" class="fs-4 pink-icon me-2"></fa-icon
-        >Download my Resume
+        <fa-icon [icon]="faDownload" class="fs-4 me-2"></fa-icon>Download my DV
       </button></a
-    > -->
+    >
   </div>
 </div>
