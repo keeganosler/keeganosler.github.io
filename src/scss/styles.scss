@@ -1,0 +1,19 @@
+@import "./theme/mat-theme.scss";
+
+.dark-theme {
+  p {
+    color: mat-color($surface-palette, 50);
+  }
+  body {
+    background-color: mat-color($surface-palette, 900);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Raleway, "Helvetica Neue", sans-serif !important;
+}
