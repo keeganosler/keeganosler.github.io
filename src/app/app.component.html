@@ -63,7 +63,7 @@
     <!-- <button mat-flat-button color="primary" class="social-button m-2">
       <fa-icon [icon]="faEnvelope" class="fs-4 me-2"></fa-icon>Send me an Email
     </button> -->
-    <button
+    <!-- <button
       mat-flat-button
       color="primary"
       class="social-button m-2"
@@ -72,8 +72,8 @@
       <div class="d-flex align-items-center justify-content-center">
         <fa-icon [icon]="faInstagram" class="fs-4 me-2"></fa-icon>Instagram
       </div>
-    </button>
-    <button
+    </button> -->
+    <!-- <button
       mat-flat-button
       color="primary"
       class="social-button m-2"
@@ -81,6 +81,27 @@
     >
       <div class="d-flex align-items-center justify-content-center">
         <fa-icon [icon]="faDiscord" class="fs-4 me-2"></fa-icon>Discord
+      </div>
+    </button> -->
+    <button
+      mat-flat-button
+      color="primary"
+      class="social-button m-2"
+      (click)="onLinkClick('stack')"
+    >
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faStackOverflow" class="fs-4 me-2"></fa-icon>Stack
+        Overflow
+      </div>
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      class="social-button m-2"
+      (click)="onLinkClick('medium')"
+    >
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faMedium" class="fs-4 me-2"></fa-icon>Medium
       </div>
     </button>
     <!-- <a

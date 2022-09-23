@@ -6,6 +6,8 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faMedium,
+  faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faDownload,
@@ -28,6 +30,8 @@ export class AppComponent {
   faLinkedin = faLinkedin;
   faDownload = faDownload;
   faDiscord = faDiscord;
+  faStackOverflow = faStackOverflow;
+  faMedium = faMedium;
   faGlasses = faGlasses;
   faMoon = faMoon;
   faSun = faSun;
@@ -74,6 +78,15 @@ export class AppComponent {
       }
       case 'discord': {
         window.location.href = 'https://discord.com/users/keeganosler#2625';
+        break;
+      }
+      case 'stack': {
+        window.location.href =
+          'https://stackoverflow.com/users/11890585/keeganosler';
+        break;
+      }
+      case 'medium': {
+        window.location.href = 'https://medium.com/@oslerkeegan';
         break;
       }
     }
