@@ -13,6 +13,8 @@ $app-theme: mat.define-light-theme(
 @include angular-material-theme($app-theme);
 
 .mat-icon {
+  height: unset !important;
+  width: unset !important;
   &.primary-icon {
     color: $pink-500;
   }
