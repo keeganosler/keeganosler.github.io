@@ -5,7 +5,7 @@
 @include mat-core();
 
 $app-theme: mat.define-light-theme(
-  mat.define-palette($blue-palette),
+  mat.define-palette($blue-palette, 400),
   mat.define-palette($pink-palette),
   mat.define-palette($warn)
 );

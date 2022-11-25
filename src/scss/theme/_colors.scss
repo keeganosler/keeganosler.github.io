@@ -1,4 +1,4 @@
-@import "~@angular/material/theming";
+@import "@angular/material/theming";
 
 $surface-palette: (
   50: #ffffff,
@@ -34,20 +34,20 @@ $surface-palette: (
 );
 
 $pink-palette: (
-  50: #fef5f6,
-  100: #fce5ea,
-  200: #fad4dc,
-  300: #f8c3cd,
-  400: #f7b6c3,
-  500: #f5a9b8,
-  600: #f4a2b1,
-  700: #f298a8,
-  800: #f08fa0,
-  900: #ee7e91,
+  50: #f8e8f2,
+  100: #f0c6e1,
+  200: #e9a2cd,
+  300: #e580b9,
+  400: #e269a7,
+  500: #e25897,
+  600: #d05490,
+  700: #b84f85,
+  800: #923a67,
+  900: #662948,
   A100: #ffffff,
   A200: #ffffff,
   A400: #ffffff,
-  A700: #fff4f6,
+  A700: #ffffff,
   contrast: (
     50: #000000,
     100: #000000,
@@ -68,16 +68,16 @@ $pink-palette: (
 
 $blue-palette: (
   (
-    50: #ebf9fe,
-    100: #cef0fe,
-    200: #ade7fd,
-    300: #8cddfc,
-    400: #74d5fb,
-    500: #5bcefa,
-    600: #53c9f9,
-    700: #49c2f9,
-    800: #40bcf8,
-    900: #2fb0f6,
+    50: #eff9fa,
+    100: #d0ecf0,
+    200: #b1dfe7,
+    300: #73c6d3,
+    400: #43b2c3,
+    500: #369bab,
+    600: #2c7f8c,
+    700: #22636d,
+    800: #14383e,
+    900: #0a1c1f,
     A100: #ffffff,
     A200: #ffffff,
     A400: #d2eeff,
