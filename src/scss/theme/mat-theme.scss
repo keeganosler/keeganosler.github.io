@@ -5,8 +5,8 @@
 @include mat-core();
 
 $app-theme: mat.define-light-theme(
-  mat.define-palette($blue-palette, 400),
-  mat.define-palette($pink-palette),
+  mat.define-palette($primary-palette),
+  mat.define-palette($secondary-palette),
   mat.define-palette($warn)
 );
 
@@ -16,19 +16,16 @@ $app-theme: mat.define-light-theme(
   height: unset !important;
   width: unset !important;
   &.primary-icon {
-    color: $pink-500;
+    color: $secondary-900;
   }
   &.inactive-icon-light {
     color: $surface-200;
   }
-  &.active-icon-light {
+  &.active-icon-light, &.active-icon-dark  {
     color: $surface-400;
   }
   &.inactive-icon-dark {
     color: $surface-600;
-  }
-  &.active-icon-dark {
-    color: $surface-400;
   }
 }
 
@@ -39,4 +36,9 @@ $app-theme: mat.define-light-theme(
   &:not(.mat-checked) {
     @include neutral-slide-toggle($surface-200, $surface-300);
   }
+}
+
+.mat-flat-button {
+  background-color: $primary-900;
+  color: $surface-50;
 }
