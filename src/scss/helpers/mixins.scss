@@ -27,3 +27,12 @@
     background-color: $background-color;
   }
 }
+
+@mixin stroked-button($color, $hover) {
+  border: 1px solid $color;
+  color: $color;
+    &:hover {
+      color: $hover;
+      border: 2px solid $hover;
+    }
+}

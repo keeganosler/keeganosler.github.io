@@ -38,7 +38,15 @@ $app-theme: mat.define-light-theme(
   }
 }
 
-.mat-flat-button {
-  background-color: $primary-900;
-  color: $surface-50;
+.mat-stroked-button {
+  background: transparent;
+  max-width: 45vw;
+  height: 65px;
+  &.button-dark-mode {
+    @include stroked-button($surface-50, $primary-500)
+  }
+  &.button-light-mode {
+    @include stroked-button($surface-900, $primary-900)
+  }
+
 }

@@ -101,6 +101,7 @@ $surface-palette: (
 
 $warn: mat-palette($mat-red);
 
+$primary-500: map-get($primary-palette, 500);
 $primary-900: map-get($primary-palette, 900);
 $secondary-900: map-get($secondary-palette, 900);
 
