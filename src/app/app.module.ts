@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { KeeButtonModule } from 'keego-ds/dist/angular/src/components/Button';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -23,6 +24,7 @@ import { AppComponent } from './app.component';
     MatButtonToggleModule,
     MatDividerModule,
     MatSlideToggleModule,
+    KeeButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
