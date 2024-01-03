@@ -1,4 +1,4 @@
-<div class="position-absolute m-2 d-flex align-items-center">
+<!-- <div class="position-absolute m-2 d-flex align-items-center">
   <mat-icon
     class="me-2"
     [ngClass]="{
@@ -18,63 +18,31 @@
     }"
     ><fa-icon [icon]="faMoon"></fa-icon
   ></mat-icon>
-</div>
-<div class="head d-flex align-items-end justify-content-start ms-4 mb-1">
-  <p class="header fs-1 fw-bold">Hey, I'm Keegan</p>
+</div> -->
+<div class="d-flex align-items-end justify-content-start ms-4 mb-1">
+  <p class="fs-1 fw-bold">Hey, I'm Keegan</p>
 </div>
 <div class="d-flex align-items-center justify-content-start ms-4 mb-1">
   <p class="fs-4 fw-bold">Frontend & Design Developer</p>
 </div>
 <div class="d-flex flex-column">
-  <button
-    mat-stroked-button
-    class="ms-4 mb-4"
-    [ngClass]="{
-      'button-dark-mode': theme == 'dark-theme',
-      'button-light-mode': theme == ''
-    }"
-    (click)="onLinkClick('github')"
-  >
+  <button class="ms-4 mb-4" (click)="onLinkClick('github')">
     <div class="d-flex align-items-center justify-content-center">
       <fa-icon [icon]="faGithub" class="fs-4 me-2"></fa-icon>Github
     </div>
   </button>
-  <button
-    mat-stroked-button
-    class="ms-4 mb-4"
-    [ngClass]="{
-      'button-dark-mode': theme == 'dark-theme',
-      'button-light-mode': theme == ''
-    }"
-    (click)="onLinkClick('linkedin')"
-  >
+  <button class="ms-4 mb-4" (click)="onLinkClick('linkedin')">
     <div class="d-flex align-items-center justify-content-center">
       <fa-icon [icon]="faLinkedin" class="fs-4 me-2"></fa-icon>LinkedIn
     </div>
   </button>
-  <button
-    mat-stroked-button
-    class="ms-4 mb-4"
-    [ngClass]="{
-      'button-dark-mode': theme == 'dark-theme',
-      'button-light-mode': theme == ''
-    }"
-    (click)="onLinkClick('stack')"
-  >
+  <button class="ms-4 mb-4" (click)="onLinkClick('stack')">
     <div class="d-flex align-items-center justify-content-center">
       <fa-icon [icon]="faStackOverflow" class="fs-4 me-2"></fa-icon>Stack
       Overflow
     </div>
   </button>
-  <button
-    mat-stroked-button
-    class="ms-4"
-    [ngClass]="{
-      'button-dark-mode': theme == 'dark-theme',
-      'button-light-mode': theme == ''
-    }"
-    (click)="onLinkClick('medium')"
-  >
+  <button class="ms-4" (click)="onLinkClick('medium')">
     <div class="d-flex align-items-center justify-content-center">
       <fa-icon [icon]="faMedium" class="fs-4 me-2"></fa-icon>Medium
     </div>

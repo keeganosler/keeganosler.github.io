@@ -11,28 +11,9 @@
 }
 
 @mixin dark-theme() {
-  @include base-theme($surface-50, $surface-900);
+  @include base-theme(blue, green);
 }
 
 @mixin light-theme() {
-  @include base-theme($surface-900, $surface-50);
-}
-
-@mixin neutral-slide-toggle($thumb-color, $background-color) {
-  .mat-slide-toggle-thumb {
-    background-color: $thumb-color;
-  }
-  .mat-slide-toggle-bar,
-  .mat-ripple-element {
-    background-color: $background-color;
-  }
-}
-
-@mixin stroked-button($color, $hover) {
-  border: 1px solid $color;
-  color: $color;
-    &:hover {
-      color: $hover;
-      border: 2px solid $hover;
-    }
+  @include base-theme(red, purple);
 }
