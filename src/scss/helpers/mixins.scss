@@ -11,7 +11,7 @@
 }
 
 @mixin dark-theme() {
-  @include base-theme(blue, green);
+  @include base-theme(black, white);
 }
 
 @mixin light-theme() {

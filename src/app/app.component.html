@@ -1,50 +1,27 @@
-<!-- <div class="position-absolute m-2 d-flex align-items-center">
-  <mat-icon
-    class="me-2"
-    [ngClass]="{
-      'active-icon-light': theme == '',
-      'inactive-icon-dark': theme == 'dark-theme'
-    }"
-    ><fa-icon [icon]="faSun"></fa-icon></mat-icon
-  ><mat-slide-toggle
-    [checked]="theme == 'dark-theme'"
-    (change)="onSlideToggleChange($event)"
-  ></mat-slide-toggle
-  ><mat-icon
-    class="ms-2"
-    [ngClass]="{
-      'active-icon-dark': theme == 'dark-theme',
-      'inactive-icon-light': theme == ''
-    }"
-    ><fa-icon [icon]="faMoon"></fa-icon
-  ></mat-icon>
-</div> -->
-<div class="d-flex align-items-end justify-content-start ms-4 mb-1">
-  <p class="fs-1 fw-bold">Hey, I'm Keegan</p>
-</div>
-<div class="d-flex align-items-center justify-content-start ms-4 mb-1">
-  <p class="fs-4 fw-bold">Frontend & Design Developer</p>
-</div>
-<div class="d-flex flex-column">
-  <button class="ms-4 mb-4" (click)="onLinkClick('github')">
-    <div class="d-flex align-items-center justify-content-center">
-      <fa-icon [icon]="faGithub" class="fs-4 me-2"></fa-icon>Github
-    </div>
-  </button>
-  <button class="ms-4 mb-4" (click)="onLinkClick('linkedin')">
-    <div class="d-flex align-items-center justify-content-center">
-      <fa-icon [icon]="faLinkedin" class="fs-4 me-2"></fa-icon>LinkedIn
-    </div>
-  </button>
-  <button class="ms-4 mb-4" (click)="onLinkClick('stack')">
-    <div class="d-flex align-items-center justify-content-center">
-      <fa-icon [icon]="faStackOverflow" class="fs-4 me-2"></fa-icon>Stack
-      Overflow
-    </div>
-  </button>
-  <button class="ms-4" (click)="onLinkClick('medium')">
-    <div class="d-flex align-items-center justify-content-center">
-      <fa-icon [icon]="faMedium" class="fs-4 me-2"></fa-icon>Medium
-    </div>
-  </button>
+<div class="h-100 w-100 d-flex align-items-center justify-content-center">
+  <div class="d-flex flex-column align-items-center">
+    <p class="fs-1 fw-bold">Hey, I'm Keegan</p>
+    <p class="fs-4 fw-bold">Frontend & Design Developer</p>
+    <button class="button--text ms-2 mb-3" (click)="onLinkClick('github')">
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faGithub" class="fs-4 me-2"></fa-icon>Github
+      </div>
+    </button>
+    <button class="button--text ms-2 mb-3" (click)="onLinkClick('linkedin')">
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faLinkedin" class="fs-4 me-2"></fa-icon>LinkedIn
+      </div>
+    </button>
+    <button class="button--text ms-2 mb-3" (click)="onLinkClick('stack')">
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faStackOverflow" class="fs-4 me-2"></fa-icon>Stack
+        Overflow
+      </div>
+    </button>
+    <button class="button--text ms-3" (click)="onLinkClick('medium')">
+      <div class="d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="faMedium" class="fs-4 me-2"></fa-icon>Medium
+      </div>
+    </button>
+  </div>
 </div>
