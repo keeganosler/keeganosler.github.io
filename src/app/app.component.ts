@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 
 import {
   faDiscord,
@@ -22,7 +22,7 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'keeganosler';
   faGithub = faGithub;
   faEnvelope = faEnvelope;
@@ -36,30 +36,44 @@ export class AppComponent {
   faMoon = faMoon;
   faSun = faSun;
 
-  theme: string;
+  theme: string = 'dark-theme';
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
-    this.theme = 'dark-theme';
-    this.selectDarkTheme();
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  ngOnInit(): void {
+    this.onThemeChange(this.theme);    
   }
 
-  onSlideToggleChange(event: any) {
-    if (event.checked) {
-      this.selectDarkTheme();
+  onThemeChange(theme: string): void {
+    this.theme = theme;
+    if (this.theme === 'dark-theme') {
+      if (this.document.documentElement.classList.contains('light-theme')) {
+        this.document.documentElement.classList.remove('light-theme');
+      }
+      this.document.documentElement.classList.add('dark-theme');
     } else {
-      this.selectLightTheme();
+      if (this.document.documentElement.classList.contains('dark-theme')) {
+        this.document.documentElement.classList.remove('dark-theme');
+      }
+      this.document.documentElement.classList.add('light-theme');
     }
+
+    // if (event.checked) {
+    //   this.selectDarkTheme();
+    // } else {
+    //   this.selectLightTheme();
+    // }
   }
 
-  public selectDarkTheme(): void {
-    this.document.documentElement.classList.add('dark-theme');
-    this.theme = 'dark-theme';
-  }
+  // public selectDarkTheme(): void {
+  //   this.document.documentElement.classList.add('dark-theme');
+  //   this.theme = 'dark-theme';
+  // }
 
-  public selectLightTheme(): void {
-    this.document.documentElement.classList.remove('dark-theme');
-    this.theme = '';
-  }
+  // public selectLightTheme(): void {
+  //   this.document.documentElement.classList.remove('dark-theme');
+  //   this.theme = '';
+  // }
 
   onLinkClick(linkType: string) {
     switch (linkType) {

@@ -1,7 +1,9 @@
 @import "./theme/bootstrap-modules";
 @import "./helpers/mixins.scss";
 
-@include light-theme();
+.light-theme {
+  @include light-theme();
+}
 
 .dark-theme {
   @include dark-theme();

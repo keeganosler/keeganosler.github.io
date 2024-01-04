@@ -1,5 +1,5 @@
 @mixin base-theme($text-color, $background-color) {
-  p {
+  p, button:not(.segmented-button) {
     color: $text-color;
   }
   body {
@@ -10,10 +10,10 @@
   }
 }
 
-@mixin dark-theme() {
-  @include base-theme(black, white);
+@mixin light-theme() {
+  @include base-theme(#333, #f5f5f5);
 }
 
-@mixin light-theme() {
-  @include base-theme(red, purple);
+@mixin dark-theme() {
+  @include base-theme(#f5f5f5, #333);
 }
