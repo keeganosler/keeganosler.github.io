@@ -1,5 +1,5 @@
 @mixin base-theme($text-color, $background-color) {
-  p, button:not(.segmented-button) {
+  p, button:not(.theme-switcher__button) {
     color: $text-color;
   }
   body {

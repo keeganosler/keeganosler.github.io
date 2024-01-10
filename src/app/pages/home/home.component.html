@@ -1,0 +1,10 @@
+<app-theme-switcher></app-theme-switcher>
+<div class="h-100 w-100 d-flex align-items-center justify-content-center">
+  <div class="d-flex flex-column align-items-center">
+    <p class="fs-1 fw-bold">Keegan Osler</p>
+    <p class="fs-5 fw-bold">Frontend & Design Developer</p>
+    <div class="buttons-container pt-2">
+      <app-link *ngFor="let link of links" [link]="link"></app-link>
+    </div>
+  </div>
+</div>

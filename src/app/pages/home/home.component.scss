@@ -1,0 +1,12 @@
+$breakpoint: 768px;
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @media (max-width: $breakpoint) {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
