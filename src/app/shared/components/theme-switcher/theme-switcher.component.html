@@ -5,6 +5,8 @@
       'theme-switcher__button--selected': theme === 'light-theme'
     }"
     (click)="onThemeChange('light-theme')"
+    type="button"
+    aria-label="light theme"
   >
     <fa-icon [icon]="faSun"></fa-icon>
   </button>
@@ -12,6 +14,8 @@
     class="theme-switcher__button"
     [ngClass]="{ 'theme-switcher__button--selected': theme === 'dark-theme' }"
     (click)="onThemeChange('dark-theme')"
+    type="button"
+    aria-label="light theme"
   >
     <fa-icon [icon]="faMoon"></fa-icon>
   </button>
