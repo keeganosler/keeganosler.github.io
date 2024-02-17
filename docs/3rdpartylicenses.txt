@@ -545,9 +545,6 @@ Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
 
-keego-ds
-ISC
-
 rxjs
 Apache-2.0
                                Apache License
