@@ -4,6 +4,7 @@ import {
   faGithub,
   faLinkedin,
   faMedium,
+  faCodepen
 } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'src/app/shared/components/link/link.component';
 
@@ -20,6 +21,11 @@ export class HomeComponent {
       title: 'Github',
       icon: faGithub,
       url: 'https://www.github.com/keeganosler'
+    }, 
+    {
+      title: 'Codepen',
+      icon: faCodepen,
+      url: 'https://codepen.io/keeganosler'
     }, 
     {
       title: 'LinkedIn',
