@@ -20,12 +20,12 @@
     "@angular/platform-browser": "^17.3.3",
     "@angular/platform-browser-dynamic": "^17.3.3",
     "@angular/router": "^17.3.3",
-    "@fortawesome/angular-fontawesome": "^0.13.0",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/angular-fontawesome": "^1.0.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "bootstrap": "^5.3.3",
-    "rxjs": "~7.8.1",
+    "rxjs": "~7.8.2",
     "tslib": "^2.4.0",
     "zone.js": "~0.14.0"
   },
@@ -41,6 +41,6 @@
     "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.8.2"
   }
 }
