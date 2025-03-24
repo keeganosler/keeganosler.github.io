@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ThemeSwitcherComponent } from './shared/components/theme-switcher/theme-switcher.component';
 import { LinkComponent } from './shared/components/link/link.component';
+import { VersionComponent } from './shared/components/version/version.component';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ThemeSwitcherComponent, LinkComponent],
+  declarations: [AppComponent, HomeComponent, ThemeSwitcherComponent, LinkComponent, VersionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
