@@ -3,9 +3,10 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-theme-switcher',
-  templateUrl: './theme-switcher.component.html',
-  styleUrls: ['./theme-switcher.component.scss']
+    selector: 'app-theme-switcher',
+    templateUrl: './theme-switcher.component.html',
+    styleUrls: ['./theme-switcher.component.scss'],
+    standalone: false
 })
 export class ThemeSwitcherComponent implements OnInit {
   faMoon = faMoon;
