@@ -1,11 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-
 @Component({
-    selector: 'app-link',
-    templateUrl: './link.component.html',
-    styleUrls: ['./link.component.scss'],
-    standalone: false
+  selector: 'app-link',
+  templateUrl: './link.component.html',
+  styleUrls: ['./link.component.scss']
 })
 export class LinkComponent {
   @Input({required: true}) link: Link;
@@ -17,6 +14,5 @@ export class LinkComponent {
 
 export interface Link {
   title: string;
-  icon: IconProp;
   url: string;
 }

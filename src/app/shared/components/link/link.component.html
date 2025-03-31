@@ -1,6 +1,6 @@
 <button class="link" (click)="onClick()">
   <span class="d-flex align-items-center justify-content-center">
-    <fa-icon [icon]="link.icon" class="me-2"></fa-icon>
-    {{ link.title }}
+    <app-icon [iconName]="link.title" class="me-2"></app-icon>
+    {{ link.title | titlecase }}
   </span>
 </button>

@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import packageJson from '../../../../../package.json';
 
 @Component({
-    selector: 'app-version',
-    templateUrl: './version.component.html',
-    styleUrl: './version.component.scss',
-    standalone: false
+  selector: 'app-version',
+  templateUrl: './version.component.html',
+  styleUrl: './version.component.scss'
 })
 export class VersionComponent implements OnInit {
   version: string;
