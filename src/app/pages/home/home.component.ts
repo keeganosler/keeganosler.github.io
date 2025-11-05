@@ -19,6 +19,10 @@ export class HomeComponent {
       url: 'https://codepen.io/keeganosler'
     }, 
     {
+      title: 'figma',
+      url: 'https://figma.com/@keeganosler'
+    },    
+    {
       title: 'linkedin',
       url: 'https://www.linkedin.com/in/keegan-osler-63a559177'
     }, 
